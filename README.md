@@ -11,6 +11,11 @@ license: mit
 
 # 🖼️ Advanced Image Classification Pipeline
 
+[![Live Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Live%20Demo-Hugging%20Face-yellow)](https://jitendra25-image-classification-pipeline.hf.space)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+**🚀 Live Demo:** **https://jitendra25-image-classification-pipeline.hf.space**
+
 A **production-ready PyTorch image classifier** with a modern FastAPI backend, a
 beautiful drag-and-drop web UI (Tailwind CSS), a polished CLI, and a fully
 optimized multi-stage Docker build ready for free / cheap cloud hosting.
