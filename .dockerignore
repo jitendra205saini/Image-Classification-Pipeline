@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.git/
+.gitignore
+.idea/
+.vscode/
+*.md
+tests/
+*.jpg
+*.jpeg
+*.png
+*.webp

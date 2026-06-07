@@ -1,0 +1,23 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Deploy: Render Dashboard -> New + -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: image-classification-pipeline
+    runtime: docker
+    plan: free                 # free tier (512 MB RAM)
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true           # redeploy automatically on every git push
+    envVars:
+      - key: MODEL_NAME
+        value: mobilenet_v3_large
+      # --- memory tuning for the 512 MB free tier ---
+      - key: TORCH_NUM_THREADS   # single-threaded inference = less RAM
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
+      - key: WARMUP              # 0 = lazy-load model on first request (service goes live faster)
+        value: "0"
+      # Render automatically provides $PORT — the Dockerfile already binds to it.
