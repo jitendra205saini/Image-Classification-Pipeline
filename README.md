@@ -1,5 +1,3 @@
-<!-- The block below is Hugging Face Spaces config. It is required for a Docker
-     Space and is harmless on GitHub (rendered as a small metadata table). -->
 ---
 title: AI Image Classifier
 emoji: 🖼️
@@ -8,6 +6,7 @@ colorTo: blue
 sdk: docker
 app_port: 8000
 pinned: false
+license: mit
 ---
 
 # 🖼️ Advanced Image Classification Pipeline
